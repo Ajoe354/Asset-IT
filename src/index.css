@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --primary: #3b82f6;
+    --sidebar: #0f172a;
+    --bg: #f8fafc;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark body {
+    background-color: #090d16;
+    color: #f1f5f9;
+  }
+}
+
+/* Sleek Interface Utility Classes */
+.sidebar-link {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.active-link {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.dark .stat-card {
+  background: #0f172a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.stat-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark .stat-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+
+.status-available {
+  background: #ecfdf5;
+  color: #059669;
+}
+.dark .status-available {
+  background: rgba(5, 150, 105, 0.15);
+  color: #34d399;
+}
+
+.status-inuse {
+  background: #eff6ff;
+  color: #2563eb;
+}
+.dark .status-inuse {
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+}
+
+.status-maintenance {
+  background: #fffbeb;
+  color: #d97706;
+}
+.dark .status-maintenance {
+  background: rgba(217, 119, 6, 0.15);
+  color: #fbbf24;
+}
+
+.status-retired {
+  background: #f3f4f6;
+  color: #4b5563;
+}
+.dark .status-retired {
+  background: rgba(75, 85, 99, 0.2);
+  color: #9ca3af;
+}
+
+.status-lost {
+  background: #fef2f2;
+  color: #dc2626;
+}
+.dark .status-lost {
+  background: rgba(220, 38, 38, 0.15);
+  color: #f87171;
+}
+
+/* Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}

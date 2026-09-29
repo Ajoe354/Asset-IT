@@ -1,0 +1,6 @@
+{
+  "name": "IT Asset Management System",
+  "description": "Sistem manajemen aset IT perusahaan modern, komprehensif, dan responsif untuk pencatatan, peminjaman, pemeliharaan, lisensi software, dan audit aset.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
